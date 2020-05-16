@@ -1,0 +1,29 @@
+{
+  "name": "pppp-demo",
+  "version": "1.0.0",
+  "description": "## Decorators",
+  "main": "safe-access-object.js",
+  "scripts": {
+    "optional-chaining-babel": "babel-node benchmarks/optional-chaining-babel.js",
+    "optional-chaining-oo": "node benchmarks/optional-chaining-oo.js",
+    "server": "node client-server/server.js",
+    "client-babel": "babel-node client-server/client-babel.js",
+    "client-oo": "node client-server/client-oo.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexImb/pppp-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexImb/pppp-demo/issues"
+  },
+  "homepage": "https://github.com/AlexImb/pppp-demo#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0"
+  }
+}
