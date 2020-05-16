@@ -2,6 +2,6 @@
 {
     "plugins": [
         ["@babel/plugin-proposal-optional-chaining"],
-        ["@babel/plugin-proposal-decorators", {"decoratorsBeforeExport": true}]
+        ["@babel/plugin-proposal-decorators", { "legacy": true }]
     ]
 }

@@ -6,7 +6,9 @@
   "scripts": {
     "optional-chaining-babel": "babel-node benchmarks/optional-chaining-babel.js",
     "optional-chaining-oo": "node benchmarks/optional-chaining-oo.js",
-    "server": "node client-server/server.js",
+    "log-babel": "babel-node benchmarks/log-babel.js",
+    "log-oo": "node benchmarks/log-oo.js",
+    "server": "babel-node client-server/server.js",
     "client-babel": "babel-node client-server/client-babel.js",
     "client-oo": "node client-server/client-oo.js"
   },
