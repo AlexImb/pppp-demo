@@ -1,10 +1,10 @@
 const SafeAccessObject = require('../safe-access-object');
 
-const dummyObjectComplete = JSON.parse('{"a":{"b":{"c": 1}}}');
-const dummyObjectIncomplete = JSON.parse('{"a":{"c": 2}}');
+const objComplete = JSON.parse('{"a":{"b":{"c": 1}}}');
+const objIncomplete = JSON.parse('{"a":{"c": 2}}');
 
-const safeObjectComplete = new SafeAccessObject(dummyObjectComplete);
-const  safeObjectcomplete = new SafeAccessObject(dummyObjectIncomplete);
+const safeObjComplete = new SafeAccessObject(objComplete);
+const safeObjIncomplete = new SafeAccessObject(objIncomplete);
 
-console.log(safeObjectComplete.getByPath('a.b.c'))
-console.log(safeObjectcomplete.getByPath('a.b.c'))
+console.log(safeObjComplete.getByPath('a.b.c'))
+console.log(safeObjIncomplete.getByPath('a.b.c'))
