@@ -6,6 +6,14 @@
 
 ## Running the experiments
 
+Install the dependencies using your favorite package manager.
+
+```
+npm install
+```
+
 See `package.json` for the possible scripts and run them with npm or yarn.
 
-Example: `npm run optional-chaining-babel`
+```
+npm run optional-chaining-babel
+```
