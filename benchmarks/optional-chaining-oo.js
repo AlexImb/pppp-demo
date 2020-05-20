@@ -1,5 +1,5 @@
 var starttime = new Date();
-for (i=0; i < 1000; i++) {
+for (i=0; i < 10000; i++) {
 
 const SafeAccessObject = require('../safe-access-object');
 
@@ -14,6 +14,5 @@ console.log(safeObjIncomplete.getByPath('a.b.c'))
 }
 
 var endtime = new Date();
-var runtime;
-runtime = endtime.getTime() - starttime.getTime();
+var runtime = endtime.getTime() - starttime.getTime();
 console.log(runtime);
