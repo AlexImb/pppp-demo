@@ -9,6 +9,7 @@
     "log-babel": "babel-node benchmarks/log-babel.js",
     "log-oo": "node benchmarks/log-oo.js",
     "server": "babel-node client-server/server.js",
+    "server-oo" : "node client-server/server-oo.js",
     "client-babel": "babel-node client-server/client-babel.js",
     "client-oo": "node client-server/client-oo.js"
   },

@@ -6,5 +6,5 @@ const objIncomplete = JSON.parse('{"a":{"c": 2}}');
 const safeObjComplete = new SafeAccessObject(objComplete);
 const safeObjIncomplete = new SafeAccessObject(objIncomplete);
 
-console.log(safeObjComplete.getByPath('a.b.c'))
-console.log(safeObjIncomplete.getByPath('a.b.c'))
+console.log(safeObjComplete.getByPath('a.b.c'));
+console.log(safeObjIncomplete.getByPath('a.b.c'));

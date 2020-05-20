@@ -1,4 +1,4 @@
-import {DebugLogger, LoggerV1} from "../oo-logger/logger";
+const {DebugLogger, LoggerV1} = require('../oo-logger/logger');
 
 const http = require('http');
 
@@ -27,7 +27,7 @@ class RequestHandler {
   
 
   loggedSend(payload) {
-    this.logger.callLogResponse(this.send, payload, this);
+    this.logger.callLogResponse(this.send, [payload], this);
   }
 
   send(payload) {
