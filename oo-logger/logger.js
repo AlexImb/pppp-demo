@@ -3,7 +3,7 @@ class Logger {
         console.log("ERROR: log method not overridden");
     }
 
-    logResponse(response) {
+    logResponse(func, args, object) {
         console.log("ERROR: log method not overridden");
     }
 }
@@ -14,11 +14,11 @@ class ProductionLogger extends Logger {
         this.filepath = filepath;
     }
 
-    logFunctionCall(func, args) {
+    logFunctionCall(func, args, object) {
         //TODO log to file
     }
 
-    logResponse(response) {
+    logResponse(func, args, object) {
         //TODO log to file
     }
 }
@@ -40,8 +40,17 @@ class DebugLogger extends Logger {
     }
 
 
-    logResponse(response) {
-        //TODO log response to console
+    logResponse(func, args, object) {
+        if (typeof func === 'function') {
+            console.log(`Sending response: ${args.map(JSON.stringify)}`);
+            try {
+                return func.apply(object, args);
+            } catch (e) {
+                console.log(`Error while sending response: ${e}`);
+                throw e;
+            }
+        }
+        return undefined;
     }
 }
 
@@ -50,7 +59,7 @@ class AbstractLogger {
         console.log("ERROR: callLog method not overridden");
     }
 
-    callLogResponse(response) {
+    callLogResponse(func, args, object) {
         console.log("ERROR: callLogResponse method not overridden");
     }
 }
@@ -65,8 +74,8 @@ class LoggerV1 extends AbstractLogger {
         this.logger.logFunctionCall(func, args, object);
     }
 
-    callLogResponse(response) {
-        this.logger.logResponse(response);
+    callLogResponse(func, args, object) {
+        this.logger.logResponse(func, args, object);
     }
 }
 
